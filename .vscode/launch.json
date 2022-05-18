@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Testes",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/pqueue_int_test",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "make_pqueue_int_test"
+        }
+    ]
+}
