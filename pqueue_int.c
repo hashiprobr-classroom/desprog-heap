@@ -82,8 +82,15 @@ int pqueue_int_full(pqueue_int *q) {
 }
 
 void pqueue_int_insert(pqueue_int *q, int value) {
+    q->data[q->size] = value;
+    ascend(q->data, q->size);
+    q->size++;
 }
 
 int pqueue_int_remove(pqueue_int *q) {
-    return 0;
+    q->size--;
+    int value = q->data[0];
+    q->data[0] = q->data[q->size];
+    descend(q->data, q->size, 0);
+    return value;
 }
